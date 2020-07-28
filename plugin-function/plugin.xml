@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><plugin>
+    <id>com.fr.plugin.function.export</id>
+    <name><![CDATA[多表导出EXCEL插件]]></name>
+    <active>yes</active>
+    <version>1.0</version>
+    <env-version>10.0</env-version>
+    <jartime>2018-07-31</jartime>
+    <vendor>author</vendor>
+    <description><![CDATA[可以将多张表的数据导出成多sheet页的excel文件]]></description>
+    <change-notes><![CDATA[
+      [2018-08-01]修改一点问题。<br/>
+      [2018-07-31]初始化插件。<br/>
+    ]]></change-notes>
+    <extra-core>
+        <FunctionDefineProvider class="com.fr.plugin.MyAbs" name="MyAbs" description="求绝对值，支持数组。"/>
+        <LocaleFinder class="com.fr.plugin.MyLocaleFinder"/>
+    </extra-core>
+    <extra-decision>
+        <HttpHandlerProvider class="com.fr.plugin.http.HttpClient"/>
+    </extra-decision>
+    <function-recorder class="com.fr.plugin.MyAbs"/>
+</plugin>
