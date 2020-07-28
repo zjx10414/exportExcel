@@ -21,8 +21,6 @@ public class ExcelExpUtil {
             // 设置response参数，可以打开下载页面
             response.reset();
             response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-//            response.addHeader("Content-Disposition", "attachment;filename=fileName" + ".xlsx");
-//            response.setContentType("application/vnd.ms-excel;charset=utf-8");
             response.setHeader("Content-Disposition", "attachment;filename="+encodeFileName(fileName,request));
             ServletOutputStream out = response.getOutputStream();
             BufferedInputStream bis = null;
